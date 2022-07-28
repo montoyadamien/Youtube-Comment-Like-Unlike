@@ -15,21 +15,30 @@ Note that YouTube will limit the number of comments, like or dislike or query yo
 - Next you will have to download the oauth credentials files in the project folder and name it `secret.json`
 - Install [Python](https://www.python.org/downloads/)
 - Install the requirements with the command `pip install -r requirements.txt`
-- Run the script with the following command `python main.py --query "my query" [--comment "My comment" --rating like --size 50]`
+- Run the script with the following command `python main.py --query "my query" [--comments "My comment" "My other comment" --rating like --size 50 --sleep 20]`
   - --query
+    - The query to search videos
     - mandatory
     - value: any text
-  - --comment
+  - --comments
+    - The different comments to randomly add on each video. When adding a comment on a video, only one will be selected randomly.
     - optional
     - value: any text
   - --rating
-      - optional
-      - value: like | dislike
-      - default: like
+    - Whether to like or dislike the video
+    - optional
+    - value: like | dislike
+    - default: like
   - --size
+    - The number of videos to query
     - optional
     - value: any positive integer
-    - default: 100
+    - default: 50 (min 0, no max)
+  - --sleep
+    - The pause time in seconds between each like/dislike/comment (useful to get a long time running script without exceed YouTube quota)
+    - optional
+    - value: any positive integer
+    - default: 30
 - The script will then ask you to open your browser in order to grant you a Google access token
 - Authorize things and copy the token that Google returns you
 - Paste the token in the console

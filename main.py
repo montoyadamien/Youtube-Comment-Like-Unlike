@@ -31,7 +31,7 @@ def youtube_search(options):
     print("=== Initiating api connection ===")
     youtube_api = get_youtube_connection()
     next_page_token = None
-    while videos_passed < MAX_RESULTS:
+    while videos_passed < options.size:
         print("=== Initiating search ===")
         search_response = youtube_api.search().list(
             q=options.query,

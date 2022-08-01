@@ -6,7 +6,7 @@ from googleapiclient.errors import HttpError
 from youtubeapi import YoutubeApi
 from os.path import exists
 
-VIDEO_IDS_FILE = "video_interaction.json"
+VIDEO_IDS_FILE = "video_interactions.json"
 
 interactions_number = 0
 videos_passed_number = 0

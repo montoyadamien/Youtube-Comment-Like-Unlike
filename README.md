@@ -10,7 +10,7 @@ If a video has already been liked or disliked, the script will just skip it and 
 Note that YouTube will limit the number of comments, like or dislike or query you can send and a 403 error will be raised when this limit is reached. More information [here](https://developers.google.com/youtube/v3/getting-started#quota).
 
 ## Run the bot
-- First of all you need to set up a [Google Cloud](https://console.cloud.google.com/?hl=fr) project (it is free)
+- First of all you need to set up a [Google Cloud Console](https://console.cloud.google.com/?hl=fr) project (it is free)
 - Then create an Oauth 2.0 credential
 - Next you will have to download the oauth credentials files in the project folder and name it `secret.json`
 - Install [Python](https://www.python.org/downloads/)
@@ -39,6 +39,10 @@ Note that YouTube will limit the number of comments, like or dislike or query yo
     - optional
     - value: any positive integer
     - default: 30
+  - --region
+    - Specify the region that should be allowed for the video
+    - optional
+    - value: any two length country code
 - The script will then ask you to open your browser in order to grant you a Google access token
 - Authorize things and copy the token that Google returns you
 - Paste the token in the console

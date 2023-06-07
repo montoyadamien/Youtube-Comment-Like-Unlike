@@ -84,7 +84,7 @@ def youtube_search(options):
                 add_comment(video_id, options.comments, interactions_with_video)
                 add_like(video_id, options.rating, interactions_with_video)
                 interactions_number += 1
-                time.sleep(options.sleep)
+                time.sleep(int(options.sleep))
             videos_done["data"].append({
                 "id": video_id,
                 "interactions": interactions_with_video
